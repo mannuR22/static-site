@@ -13,7 +13,13 @@
   <script src="script.js"></script>
   <script>
     // Fetch dropdown HTML component from the API
-    fetch('https://multilang.mivs.in/api/v1/dropdown')
+    fetch('https://mansishrana.online/api/dropdown', {
+      method: 'GET', // HTTP method
+      headers: {
+        'x-requested-with': 'XMLHttpRequest',
+        'content-type': 'text/html' // Add custom header
+      }
+    })
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
