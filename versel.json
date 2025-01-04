@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/sites/",
+      "destination": "/sites/index.html",
+      "permanent": true
+    }
+  ]
+}
