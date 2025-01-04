@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/sites/",
-      "destination": "/sites/index.html",
+      "destination": "/sitexyz/index.html",
       "permanent": true
     }
   ]
