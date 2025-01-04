@@ -3,6 +3,10 @@
     {
       "source": "/sites/",
       "destination": "/sitexyz/index.html"
+    },
+    {
+      "source": "/api/dropdown",
+      "destination": "/api/dropdown.html"
     }
   ]
 }
