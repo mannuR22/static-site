@@ -9,7 +9,26 @@
   <h1>Welcome to the Sites Page</h1>
   <p>This page works without a server!</p>
   <button id="clickButton">Click Me!</button>
-
+  <div id="select" ></div>
   <script src="script.js"></script>
+  <script>
+    // Fetch dropdown HTML component from the API
+    fetch('https://multilang.mivs.in/api/v1/dropdown')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text(); // Get response as text (HTML)
+      })
+      .then(html => {
+        // Insert the fetched HTML into the div with id="select"
+        document.getElementById('select').innerHTML = html;
+      })
+      .catch(error => {
+        // Handle errors
+        console.error('Error fetching dropdown:', error);
+        document.getElementById('select').innerHTML = '<p>Failed to load dropdown.</p>';
+      });
+  </script>
 </body>
 </html>
